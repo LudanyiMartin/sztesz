@@ -36,12 +36,28 @@ namespace sztesz
 
 		private void ShowMinimumButton_Click(object sender, RoutedEventArgs e)
 		{
-			
+			if (numbers.Count > 0)
+			{
+				int min = numbers.Min();
+				MessageBox.Show($"Minimum: {min}");
+			}
+			else
+			{
+				MessageBox.Show("No numbers entered.");
+			}
 		}
 
 		private void ShowMaximumButton_Click(object sender, RoutedEventArgs e)
 		{
-			
+			if (numbers.Count > 0)
+			{
+				int max = numbers.Max();
+				MessageBox.Show($"Maximum: {max}");
+			}
+			else
+			{
+				MessageBox.Show("No numbers entered.");
+			}
 		}
 	}
 }
