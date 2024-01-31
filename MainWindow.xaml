@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 	<Grid>
-		
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+			<TextBox x:Name="inputTextBox" Width="100" Margin="0,0,0,10" />
+			<Button Content="Add" Width="100" Margin="0,0,0,10" Click="AddButton_Click" />
+			<TextBlock x:Name="numbersTextBlock" TextAlignment="Center"/>
+			<Button Content="Show Minimum" Width="100" Click="ShowMinimumButton_Click" />
+			<Button Content="Show Maximum" Width="100" Click="ShowMaximumButton_Click" />
+		</StackPanel>
 	</Grid>
 </Window>
