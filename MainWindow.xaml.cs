@@ -15,17 +15,33 @@ using System.Windows.Shapes;
 
 namespace sztesz
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
+	
 	public partial class MainWindow : Window
 	{
-
+		private List<int> numbers = new List<int>();
 
 		public MainWindow()
 		{
 			InitializeComponent();
 		}
+		private void AddButton_Click(object sender, RoutedEventArgs e)
+		{
+			if (int.TryParse(inputTextBox.Text, out int input))
+			{
+				numbers.Add(input);
+				numbersTextBlock.Text = $"Numbers: {string.Join(", ", numbers)}";
+				inputTextBox.Clear();
+			}
+		}
 
+		private void ShowMinimumButton_Click(object sender, RoutedEventArgs e)
+		{
+			
+		}
+
+		private void ShowMaximumButton_Click(object sender, RoutedEventArgs e)
+		{
+			
+		}
 	}
 }
